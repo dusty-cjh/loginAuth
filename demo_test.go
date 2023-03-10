@@ -1,15 +1,15 @@
-package login_auth_test
+package loginauth_test
 
 import (
 	"context"
-	login_auth "github.com/dusty-cjh/loginAuth"
+	loginAuth "github.com/dusty-cjh/loginAuth"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 )
 
 func TestDemo(t *testing.T) {
-	cfg := login_auth.CreateConfig()
+	cfg := loginAuth.CreateConfig()
 	cfg.Headers["X-Host"] = "[[.Host]]"
 	cfg.Headers["X-Method"] = "[[.Method]]"
 	cfg.Headers["X-URL"] = "[[.URL]]"
@@ -19,7 +19,7 @@ func TestDemo(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {})
 
-	handler, err := login_auth.New(ctx, next, cfg, "demo-plugin")
+	handler, err := loginAuth.New(ctx, next, cfg, "demo-plugin")
 	if err != nil {
 		t.Fatal(err)
 	}
