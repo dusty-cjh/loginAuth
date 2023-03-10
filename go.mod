@@ -1,3 +1,3 @@
-module github.com/traefik/plugindemo
+module github.com/dusty-cjh/loginAuth
 
 go 1.19

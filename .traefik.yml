@@ -1,8 +1,8 @@
-displayName: Demo Plugin
+displayName: Login Auth
 type: middleware
 iconPath: .assets/icon.png
 
-import: github.com/traefik/plugindemo
+import: github.com/dusty-cjh/loginAuth
 
 summary: '[Demo] Add Request Header'
 
