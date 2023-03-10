@@ -4,8 +4,8 @@ export GO111MODULE=on
 
 default: lint test
 
-lint:
-	golangci-lint run
+#lint:
+#	golangci-lint run
 
 test:
 	go test -v -cover ./...

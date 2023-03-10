@@ -44,6 +44,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 }
 
 func (a *Demo) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
+	fmt.Println("got reqeust fomr loginath middleware")
 	for key, value := range a.headers {
 		tmpl, err := a.template.Parse(value)
 		if err != nil {
