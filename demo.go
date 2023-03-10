@@ -1,4 +1,4 @@
-// Package login auth.
+// Package login_auth is a plugin that parse user access token and check its validity.
 package login_auth
 
 import (
